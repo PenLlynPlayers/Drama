@@ -1,0 +1,271 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pen Llyn Players</title>
+    <!-- Use Inter font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Include Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .scroll-to-target {
+            scroll-margin-top: 5rem; /* Adjust for fixed header */
+        }
+        .glow-button {
+            transition: all 0.3s ease;
+        }
+        .glow-button:hover {
+            box-shadow: 0 0 15px rgba(220, 50, 50, 0.7);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- Header & Navigation -->
+    <header class="bg-gray-200 sticky top-0 z-50 shadow-lg">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#home" class="flex items-center">
+                <!-- Pen Llyn Players Logo SVG -->
+                <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="200" height="200" fill="#e8d4b3" />
+                    <!-- Black outline of the Llyn Peninsula -->
+                    <path d="M100 160 C105 140, 125 140, 140 160 S160 180, 150 185 L130 185 C120 190, 100 180, 85 170 L100 160 Z" fill="none" stroke="black" stroke-width="2"/>
+                    
+                    <!-- Happy Mask -->
+                    <g transform="translate(40, 50) scale(2.0)">
+                        <path d="M10 2.5 A7.5 7.5 0 1 0 10 17.5 A7.5 7.5 0 1 0 10 2.5 Z" fill="#ffd700" stroke="#b8860b" stroke-width="0.5" />
+                        <!-- Happy Eyes -->
+                        <circle cx="6" cy="7.5" r="1.5" fill="#333" />
+                        <circle cx="14" cy="7.5" r="1.5" fill="#333" />
+                        <!-- Happy Mouth -->
+                        <path d="M7 13 C8.5 15, 11.5 15, 13 13" fill="none" stroke="#333" stroke-width="1.5" stroke-linecap="round" />
+                    </g>
+
+                    <!-- Sad Mask -->
+                    <g transform="translate(90, 50) scale(2.0)">
+                        <path d="M10 2.5 A7.5 7.5 0 1 0 10 17.5 A7.5 7.5 0 1 0 10 2.5 Z" fill="#ffd700" stroke="#b8860b" stroke-width="0.5" />
+                        <!-- Sad Eyes -->
+                        <circle cx="6" cy="7.5" r="1.5" fill="#333" />
+                        <circle cx="14" cy="7.5" r="1.5" fill="#333" />
+                        <!-- Sad Mouth -->
+                        <path d="M7 15 C8.5 13, 11.5 13, 13 15" fill="none" stroke="#333" stroke-width="1.5" stroke-linecap="round" />
+                    </g>
+                    
+                    <!-- Text "Pen Llyn Players" -->
+                    <text x="100" y="140" font-size="24" fill="#ef4444" font-weight="bold" text-anchor="middle">Pen Llyn Players</text>
+                </svg>
+            </a>
+            <div class="hidden md:flex space-x-8 text-lg">
+                <a href="#shows" class="hover:text-red-600 transition-colors">Shows</a>
+                <a href="#home" class="hover:text-red-600 transition-colors">Past Productions</a>
+                <a href="#about" class="hover:text-red-600 transition-colors">About Us</a>
+                <a href="#join" class="hover:text-red-600 transition-colors">Join Us</a>
+                <a href="#gallery" class="hover:text-red-600 transition-colors">Gallery</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-red-600 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-200 text-center pb-4">
+                <a href="#shows" class="block py-2 text-lg hover:bg-gray-300 transition-colors">Shows</a>
+                <a href="#home" class="block py-2 text-lg hover:bg-gray-300 transition-colors">Past Productions</a>
+                <a href="#about" class="block py-2 text-lg hover:bg-gray-300 transition-colors">About Us</a>
+                <a href="#join" class="block py-2 text-lg hover:bg-gray-300 transition-colors">Join Us</a>
+                <a href="#gallery" class="block py-2 text-lg hover:bg-gray-300 transition-colors">Gallery</a>
+        </div>
+    </header>
+
+    <!-- Upcoming Shows Section -->
+    <section id="shows" class="scroll-to-target py-16 bg-gray-200">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-red-600 mb-4">Our Upcoming Show</h2>
+                <p class="text-lg text-gray-700">Join us for a twist on a classic tale!</p>
+            </div>
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-1">
+                <!-- Show Card 1 -->
+                <div class="bg-gray-300 rounded-3xl shadow-lg overflow-hidden border border-gray-300">
+                    <div class="flex flex-col md:flex-row">
+                        <!-- Image placeholder as requested -->
+                        <div class="w-full md:w-1/2 h-56 bg-gray-400 flex items-center justify-center text-center">
+                            <span class="text-xl text-gray-800">Image Coming Soon</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-center">
+                            <h3 class="text-3xl font-semibold text-red-600 mb-2">Snow White and the Seven Spritely Seniors</h3>
+                            <p class="text-gray-800 mb-4 text-lg leading-relaxed">
+                                Our hilarious new pantomime brings a fresh perspective to a timeless fairytale. Laugh along as Snow White befriends a group of wise- cracking seniors who have seen it all! This family-friendly show is packed with music, gags, and heart. Don't miss this one-of-a-kind production that's sure to be a sell-out!
+                            </p>
+                            <!-- New section for show details -->
+                            <div class="mt-4 p-4 bg-gray-400 rounded-2xl border border-gray-500">
+                                <h4 class="text-xl font-bold text-red-600 mb-2">Show Details</h4>
+                                <p class="text-lg text-gray-800"><strong class="font-semibold text-gray-900">Tickets:</strong> £5 (Pay at the door)</p>
+                                <p class="text-lg text-gray-800"><strong class="font-semibold text-gray-900">Dates & Times:</strong> January 11 & 12th at 2pm</p>
+                                <p class="text-lg text-gray-800"><strong class="font-semibold text-gray-900">Location:</strong> Canolfan Nefyn, Pwllheli, Gwynedd</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Past Productions Section (formerly Hero Section) -->
+    <section id="home" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-red-600 mb-4 drop-shadow-lg">
+                    See Our Past Productions
+                </h1>
+                <p class="text-xl md:text-2xl font-light text-gray-700 mb-8">
+                    A look back at some of our favorite moments on stage.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Past Show Card 1: Jack and the Beanstalk -->
+                <div class="bg-gray-300 rounded-3xl shadow-lg overflow-hidden border border-gray-300">
+                    <img src="https://placehold.co/600x400/22c55e/333333?text=Image+Coming+Soon" alt="Jack and the Beanstalk" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Jack and the Beanstalk</h3>
+                        <p class="text-gray-700 mb-4">
+                            A classic tale brought to life with our annual festive pantomime.
+                        </p>
+                    </div>
+                </div>
+                <!-- Past Show Card 2: Summer Sketches -->
+                <div class="bg-gray-300 rounded-3xl shadow-lg overflow-hidden border border-gray-300">
+                    <img src="https://placehold.co/600x400/f59e0b/333333?text=Image+Coming+Soon" alt="Summer Sketches" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Summer sketches</h3>
+                        <p class="text-gray-700 mb-4">
+                            A collection of short, witty scenes performed on a warm summer's evening.
+                        </p>
+                    </div>
+                </div>
+                <!-- Past Show Card 3: Cinderella -->
+                <div class="bg-gray-300 rounded-3xl shadow-lg overflow-hidden border border-gray-300">
+                    <img src="https://placehold.co/600x400/3b82f6/333333?text=Image+Coming+Soon" alt="Cinderella" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Cinderella</h3>
+                        <p class="text-gray-700 mb-4">
+                            Our magical rendition of the beloved fairy tale that enchanted audiences of all ages.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="scroll-to-target py-16 bg-gray-100">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">About Us</h2>
+                <p class="text-lg text-gray-700">A community where creativity shines and stories come to life.</p>
+            </div>
+            <div class="bg-gray-300 p-8 rounded-3xl shadow-lg border border-gray-300">
+                <p class="text-lg leading-relaxed text-gray-800">
+                    The Dramatic Society was founded in 1985 with a simple mission: to bring quality, accessible theatre to our local community. We are a non-profit, volunteer-run organization dedicated to fostering a love for the performing arts. Our group was founded by our esteemed director, **Roberta**, a professional with many accolades to her name. We are also proud to be supported by the charity **AgeWell**, who help us in our mission. Whether you're a seasoned actor, a budding director, or someone who just loves to help behind the scenes with costumes or lighting, we have a place for you. We produce a range of plays, from classic dramas to modern comedies, and we believe that every member, on or off the stage, contributes to the magic of live performance.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Us/Contact Section -->
+    <section id="join" class="scroll-to-target py-16 bg-gray-100">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Join Our Community</h2>
+                <p class="text-lg text-gray-700">Whether on or off the stage, we'd love to have you.</p>
+            </div>
+            <div class="bg-gray-300 p-8 rounded-3xl shadow-lg border border-gray-300 text-lg text-gray-800 leading-relaxed">
+                <p class="mb-4">
+                    Feel free to reach out to us with any questions or if you'd like to get involved!
+                </p>
+                <ul class="space-y-4">
+                    <li>
+                        <strong class="font-semibold text-gray-900">Email:</strong> <a href="mailto:your.email@example.com" class="text-red-600 hover:text-red-700 transition-colors">your.email@example.com</a>
+                    </li>
+                    <li>
+                        <strong class="font-semibold text-gray-900">Phone:</strong> <a href="tel:+441234567890" class="text-red-600 hover:text-red-700 transition-colors">+44 1234 567890</a>
+                    </li>
+                    <li>
+                        <strong class="font-semibold text-gray-900">Rehearsals:</strong> Pop along to our rehearsals on Monday from 2-4pm at Canolfan Nefyn, Pwllheli, Gwynedd. We'd love to see you!
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="scroll-to-target py-16 bg-gray-200">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Gallery</h2>
+                <p class="text-lg text-gray-700">A look back at some of our favorite moments on stage.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <img src="https://placehold.co/600x400/f0f4f8/333333?text=Gallery+Image+1" alt="Gallery image 1" class="w-full h-auto rounded-xl shadow-md transform hover:scale-105 transition-transform">
+                <img src="https://placehold.co/600x400/e3e6e8/333333?text=Gallery+Image+2" alt="Gallery image 2" class="w-full h-auto rounded-xl shadow-md transform hover:scale-105 transition-transform">
+                <img src="https://placehold.co/600x400/d6d9da/333333?text=Gallery+Image+3" alt="Gallery image 3" class="w-full h-auto rounded-xl shadow-md transform hover:scale-105 transition-transform">
+                <img src="https://placehold.co/600x400/a2a6a8/333333?text=Gallery+Image+4" alt="Gallery image 1" class="w-full h-auto rounded-xl shadow-md transform hover:scale-105 transition-transform">
+                <img src="https://placehold.co/600x400/7a7d7f/333333?text=Gallery+Image+5" alt="Gallery image 2" class="w-full h-auto rounded-xl shadow-md transform hover:scale-105 transition-transform">
+                <img src="https://placehold.co/600x400/626567/333333?text=Gallery+Image+6" alt="Gallery image 3" class="w-full h-auto rounded-xl shadow-md transform hover:scale-105 transition-transform">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-200 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-700">&copy; 2024 Pen Llyn Players. All rights reserved.</p>
+            <div class="mt-4 flex justify-center space-x-6">
+                <a href="#" class="text-gray-700 hover:text-gray-900 transition-colors">
+                    <!-- Facebook icon (placeholder) -->
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.505 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.77l-.44 2.893h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <a href="#" class="text-gray-700 hover:text-gray-900 transition-colors">
+                    <!-- Twitter icon (placeholder) -->
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M22.106 5.86c-.792.352-1.65.588-2.543.693 1.085-.65 1.91-1.688 2.3-2.912-.99.588-2.083 1.01-3.25 1.238-1.028-1.1-2.493-1.787-4.103-1.787-3.1 0-5.614 2.513-5.614 5.614 0 .44.05.868.145 1.278-4.664-.23-8.795-2.464-11.56-5.845-.482.83-.757 1.794-.757 2.825 0 1.948.99 3.666 2.498 4.675-1.01-.03-1.96-.31-2.793-.77v.07c0 2.728 1.936 5.013 4.498 5.52-.47.128-.96.195-1.464.195-.357 0-.705-.035-1.045-.10.714 2.227 2.787 3.847 5.23 3.89-1.928 1.51-4.364 2.41-7.006 2.41-.456 0-.903-.027-1.342-.078 2.492 1.597 5.44 2.536 8.59 2.536 10.306 0 15.945-8.54 15.945-15.945 0-.243-.005-.48-.013-.717.868-.626 1.62-1.407 2.22-2.308z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu & Smooth Scrolling -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile menu functionality
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when a link is clicked
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
